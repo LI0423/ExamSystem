@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BasicSystem" />
         <module name="BusinessSystem" />
-        <module name="ExamSystem" />
         <module name="GatewaySystem" />
         <module name="EurekaSystem" />
       </profile>
@@ -19,7 +18,7 @@
       <module name="BasicSystem" options="-parameters" />
       <module name="BusinessSystem" options="-parameters" />
       <module name="EurekaSystem" options="-parameters" />
-      <module name="ExamSystem" options="-parameters" />
+      <module name="ExamSystem" options="" />
       <module name="GatewaySystem" options="-parameters" />
     </option>
   </component>

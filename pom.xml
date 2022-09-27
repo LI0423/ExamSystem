@@ -13,6 +13,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ExamSystem</name>
 	<description>ExamSystem</description>
+	<packaging>pom</packaging>
+	<modules>
+		<module>BasicSystem</module>
+		<module>BusinessSystem</module>
+		<module>EurekaSystem</module>
+		<module>GatewaySystem</module>
+	</modules>
 	<properties>
 		<java.version>19</java.version>
 		<repackage.classifier/>
