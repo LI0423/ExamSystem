@@ -2,7 +2,7 @@ package com.example.basicsystem.entity;
 
 import java.util.Date;
 
-public class SysUser {
+public class SysUserDO {
 
     private String id;
 
