@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BasicSystem" />
-        <module name="BusinessSystem" />
+        <module name="ServerSystem" />
         <module name="GatewaySystem" />
         <module name="EurekaSystem" />
       </profile>
@@ -16,10 +16,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BasicSystem" options="-parameters" />
-      <module name="BusinessSystem" options="-parameters" />
       <module name="EurekaSystem" options="-parameters" />
       <module name="ExamSystem" options="" />
       <module name="GatewaySystem" options="-parameters" />
+      <module name="ServerSystem" options="-parameters" />
     </option>
   </component>
 </project>
