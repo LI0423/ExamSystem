@@ -21,24 +21,25 @@ import java.util.List;
 public class ExamResourceServiceImpl implements ExamResourceService {
 
     @Resource
-    ExamResourceRepository examResourceRepository;
-
-    @Resource
     MongoTemplate mongoTemplate;
 
     @Override
     public ResourceDO getResourceDOByNum(Integer num) {
-        return examResourceRepository.getResourceDOByNum(num);
+        Query query = new Query();
+        query.addCriteria(Criteria.where("num").is(num));
+        return mongoTemplate.findOne(query, ResourceDO.class);
     }
 
     @Override
     public List<ResourceDO> getAllResourceByType(Integer type) {
-        return examResourceRepository.getAllByType(type);
+        Query query = new Query();
+        query.addCriteria(Criteria.where("type").is(type));
+        return mongoTemplate.find(query, ResourceDO.class);
     }
 
     @Override
     public ResourceDO saveResourceDO(ResourceDO resourceDO) {
-        return examResourceRepository.save(resourceDO);
+        return mongoTemplate.save(resourceDO);
     }
 
     @Override
@@ -55,7 +56,7 @@ public class ExamResourceServiceImpl implements ExamResourceService {
                 resourceDOS.add(resourceDO);
             }
         }
-        examResourceRepository.saveAll(resourceDOS);
+        mongoTemplate.save(resourceDOS);
         return null;
     }
 
