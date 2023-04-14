@@ -11,6 +11,7 @@
         <module name="ServerSystem" />
         <module name="GatewaySystem" />
         <module name="EurekaSystem" />
+        <module name="FileSystem" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +20,7 @@
       <module name="BasicSystem" options="-parameters" />
       <module name="EurekaSystem" options="-parameters" />
       <module name="ExamSystem" options="" />
+      <module name="FileSystem" options="-parameters" />
       <module name="GatewaySystem" options="-parameters" />
       <module name="ServerSystem" options="-parameters" />
     </option>

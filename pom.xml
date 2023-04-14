@@ -19,6 +19,7 @@
 		<module>ServerSystem</module>
 		<module>EurekaSystem</module>
 		<module>GatewaySystem</module>
+		<module>FileSystem</module>
 	</modules>
 	<properties>
 		<java.version>19</java.version>
@@ -92,6 +93,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.minio</groupId>
+			<artifactId>minio</artifactId>
+			<version>8.5.2</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
