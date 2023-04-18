@@ -8,10 +8,10 @@ server:
   port: 9004
 
 minio:
-  endpoint: http://127.0.0.1:9090
+  endpoint: http://youngmanltj.xyz
   port: 9000
-  accessKey: minioadmin
-  secretKey: minioadmin
+  accessKey: minioAdmin
+  secretKey: minioAdmin
   secure: false
-  bucketName: my-test
+  bucketName: my-bucket
   fileSize: 1073741824

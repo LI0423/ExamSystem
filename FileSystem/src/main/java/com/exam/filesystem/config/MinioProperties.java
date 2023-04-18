@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "minio")
 public class MinioProperties {
 
+    private static final long serialVersionUID = 1L;
+
     private String endpoint;
 
     private Integer port;

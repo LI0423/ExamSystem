@@ -4,6 +4,8 @@ import com.exam.filesystem.Utils.FileTypeUtils;
 import com.exam.filesystem.Utils.MinioUtils;
 import com.exam.filesystem.config.MinioProperties;
 import com.exam.filesystem.service.MinioService;
+import io.minio.Result;
+import io.minio.messages.Item;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.util.Collections;
+import java.util.List;
 
 @Service
 public class MinioServiceImpl implements MinioService {
@@ -60,5 +64,11 @@ public class MinioServiceImpl implements MinioService {
     @Override
     public String getObjectUrl(String bucketName, String objectName) {
         return minioUtils.getObjectUrl(bucketName, objectName);
+    }
+
+    @Override
+    public Iterable<Result<Item>> getObjectList(String bucketName) {
+        Iterable<Result<Item>> results = minioUtils.listObjects(bucketName);
+        return results;
     }
 }
