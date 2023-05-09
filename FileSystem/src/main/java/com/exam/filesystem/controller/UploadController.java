@@ -1,7 +1,7 @@
 package com.exam.filesystem.controller;
 
-import com.exam.filesystem.service.MinioService;
 import com.basicsystem.common.ResponseResult;
+import com.exam.filesystem.service.MinioService;
 import io.minio.Result;
 import io.minio.messages.Item;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
-import java.util.List;
 
 @Controller
 @RequestMapping("/obs")

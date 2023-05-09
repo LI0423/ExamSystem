@@ -1,7 +1,7 @@
 package com.serversystem.controller;
 
-import com.basicsystem.common.BasicController;
 import com.basicsystem.common.ResponseResult;
+import com.serversystem.common.BasicController;
 import com.serversystem.dto.ResourceQueryDTO;
 import com.serversystem.service.ExamResourceService;
 import org.springframework.web.bind.annotation.PostMapping;

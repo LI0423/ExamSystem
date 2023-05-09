@@ -1,6 +1,6 @@
 package com.basicsystem.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SysMenuDO {
 
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     private String permission;
@@ -19,11 +20,15 @@ public class SysMenuDO {
 
     private Integer delFlag;
 
+    @TableField(fill = FieldFill.INSERT)
     private String createBy;
 
+    @TableField(fill = FieldFill.INSERT)
     private Long createDate;
 
+    @TableField(fill = FieldFill.UPDATE)
     private String updateBy;
 
+    @TableField(fill = FieldFill.UPDATE)
     private Long updateDate;
 }
