@@ -46,7 +46,7 @@ public class ShiroConfig {
         Map<String, Filter> filters = new LinkedHashMap<>();
         LogoutFilter logoutFilter = new LogoutFilter();
         logoutFilter.setRedirectUrl("/login");
-        filters.put("logout",logoutFilter);
+        filters.put("logout", logoutFilter);
         shiroFilterFactoryBean.setFilters(filters);
         return shiroFilterFactoryBean;
     }

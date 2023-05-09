@@ -1,11 +1,11 @@
 package com.serversystem.common.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class AccessLimitInterceptor  implements HandlerInterceptor {
-    @Resource
+    @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
     /**

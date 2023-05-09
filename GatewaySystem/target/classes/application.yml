@@ -1,0 +1,30 @@
+server:
+  port:
+    9002
+spring:
+  application:
+    name:
+      gateway
+  cloud:
+    gateway:
+      routes[0]:
+        id:
+          server
+        uri:
+          http://localhost:9001
+        predicates[0]:
+          Path:
+            /server/**
+      routes[1]:
+        id:
+          admin
+        uri:
+          http://localhost:9002
+        predicates[0]:
+          Path:
+            /admin/**
+eureka:
+  client:
+    service-url:
+      defaultzone:
+        http://localhost:8761/eureka/

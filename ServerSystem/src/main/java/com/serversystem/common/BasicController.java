@@ -5,13 +5,13 @@ import com.basicsystem.common.ResponseResultPage;
 import com.basicsystem.entity.SysUserDO;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
+import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public abstract class BasicController {
